@@ -1,0 +1,82 @@
+:root {
+    --navHeight: 10vh;
+    --headHeight: 90vh;
+    --headWidth: 90vw;
+    --mainHeight: 200vh;
+    --rainbow: linear-gradient(145deg, red 0%, orange 20%, yellow 40%, green 60%, blue 80%, violet 100%);
+    --divWidth: 20vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    text-transform: none;
+    font-family: arial;
+
+}
+
+nav, 
+header {
+position: fixed;
+}
+
+nav {
+height: var(--navHeight);
+background-color: black;
+line-height: var(--navHeight);
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1;
+
+}
+
+nav div {
+    float: left;
+    height: 10vh;
+    border: 2px solid white;
+    font-size: 20px;
+}
+
+nav div.logo {
+   line-height: var(--navHeight);
+   width: var(--divWidth)
+}
+
+nav div.search {
+    line-height: var(--navHeight);
+    width: var(--divWidth);
+ }
+
+nav div.nav {
+    line-height: var(--navHeight);
+    width: calc(100% - 2*var(--divWidth));
+    top: 0;
+    
+}
+
+
+header {
+height: var(--headHeight);
+background-color: brown;
+line-height: var(--headHeight);
+top: var(--navHeight);
+width: 100%;
+
+}
+
+main {
+height: var(--mainHeight);
+background-image: var(--rainbow);
+line-height: var(--mainHeight);
+position: relative;
+top: 100vh;
+left: 0;
+}
